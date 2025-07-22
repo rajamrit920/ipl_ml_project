@@ -1,21 +1,42 @@
-# 🏏 IPL Score Prediction using Machine Learning  
+# IPL Score Predictor
 
-## 📌 Project Overview  
-This project aims to predict the final score of an IPL match using **machine learning algorithms** based on real-time match parameters such as current score, overs, wickets, and historical match data. By leveraging advanced models like **Random Forest, KNN, and AdaBoost**, the system provides accurate predictions to assist analysts, fans, and coaches in understanding game dynamics. Additionally, the project includes **data visualization** features for insights into player statistics and match trends.  
+This Streamlit webapp enables user to predict total runs between teams using current runs and wickets.
 
-## 🛠️ Tech Stack  
-The project is developed using **Python** with key libraries such as **Scikit-learn, Pandas, NumPy, Matplotlib, and Seaborn** for data processing and model training. For web-based interaction, **Flask and Streamlit** are used to create a user-friendly interface. The dataset is sourced from **historical IPL match records**, cleaned, and preprocessed to enhance model performance. Version control is managed using **Git**, ensuring efficient collaboration and updates.  
+**Algorithms used:**
 
-## 🔥 Model Performance  
-The machine learning models achieve high accuracy in predicting IPL match scores. The **Random Forest model** provides the best performance with **85% accuracy**, followed by **AdaBoost at 83%** and **KNN at 78%**. These models are trained on historical match data, considering factors like runs, overs, wickets, and team strategies.  
+* Linear Regression
+* K-Nearest Neighbor Regressor 
+* XGBoost Regressor
+* RandomForest Regressor
+* SVR
+* Decision Tree Regressor
 
+**Hyperparamter Optimization:**
 
-## 📊 Results and Future Enhancements  
-The project successfully predicts **match scores with high accuracy**, providing users with an interactive **dashboard** to visualize **player stats and match outcomes**. Future improvements include **deep learning integration** for better accuracy, **live API support** for real-time match data, and **advanced feature engineering** to enhance predictions.  
+Used optuna for paramter optimization.
 
-## 🤝 Contributors  
-This project was developed by **Amrit Raj, Sai Pramod, and Snehasish Kabi**, under the guidance of **Dr. Lakshmi Shree K**.  
+**Dataset:**
 
-## 📝 License  
-This project is open-source and available under the **MIT License**. Contributions and improvements are welcome! 🚀  
+The dataset comprises of over by over details of matches and runs from 2008 to 2020.
 
+Dataset Used: ipl_data.csv
+
+* mid - match id
+* date - when matches are played
+* venue - place where matches aew played
+* bat_team - batting team
+* bowl_team - bowling team
+* batsman - batsman
+* bowler - bowler
+* runs - runs scored
+* wickets - wickets
+* overs - overs - next 3 are based on this
+* run_last_5 - runs scored in last 5 overs
+* wicket_last_5 - wickets in last 5 overs
+* stricker - batsman playing as main 1
+* non-striker - batsman playing as runner up - not main 0
+* total - total score (target variable)
+
+**Streamlit App:**
+
+![](https://github.com/zep-analytics/IPLScorePredictor/blob/main/streamlit_app/ipl_score_predictor.gif)
